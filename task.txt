@@ -1,0 +1,26 @@
+The Test Task
+The test task is expected to take a minimum of 8 hours to complete.
+What to Build?
+Create a simple user list page using Next.js 15 (stable version) with Server-Side Rendering (SSR). The page should display a list of users, be optimized for SEO, and meet basic WCAG accessibility standards.
+Tech Requirements
+Frontend:
+Build the page using Next.js 15 with SSR.
+User List:
+Display a list of users with names and short descriptions. Use static data (e.g., a JSON file) for the users.
+SEO Optimization:
+Implement dynamic <title> and <meta name="description"> tags.
+Ensure the page is crawlable by search engines (SSR ensures this).
+WCAG Compliance:
+Use semantic HTML (e.g., proper <h1>, <ul>, etc.).
+Add alt text to any images (if included).
+Ensure basic keyboard navigation support (e.g., focus states).
+Performance:
+Optimize for fast load times (e.g., use Next.js’s <Image> component with lazy loading if images are included)
+Submission
+Share your public GitHub repository containing all the code.
+Include a README with:
+Clear instructions to build and run the app locally.
+A brief explanation of how you implemented SEO optimizations and WCAG compliance.
+Compensation for the Test Task
+You’ll be compensated for the full hours worked on this task, with compensation reflected in your first pay period.
+Looking forward to seeing what you build! Our expectation is for you to finish it within one week from today.

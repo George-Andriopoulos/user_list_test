@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js 15 SSR User List - Test Task
 
-## Getting Started
+A simple user list page built with Next.js 15 (App Router) featuring SSR, Tailwind CSS, static data with images, SEO, and basic WCAG compliance, as per the test task requirements.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js 15 (App Router)
+- React / TypeScript
+- Tailwind CSS
+- `next/font` (Geist Sans/Mono)
+- `next/image`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Clone:** `git clone <Your-GitHub-Repository-URL-Here>`
+2.  **Navigate:** `cd <your-project-directory-name>`
+3.  **Install:** `npm install` (or `yarn install` / `pnpm install`)
+4.  **Place Images:** Ensure image files (e.g., `iron_man.png`) are in the `/public` directory.
+5.  **Run:** `npm run dev` (or `yarn dev` / `pnpm dev`)
+6.  **View:** Open [http://localhost:3000/users](http://localhost:3000/users)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Implementation Notes
 
-## Learn More
+### SEO Optimization
 
-To learn more about Next.js, take a look at the following resources:
+- **Metadata:** Page-specific `<title>` and `<meta name="description">` tags are dynamically generated using the `metadata` export feature within the page component (`app/users/page.tsx`). Default metadata can be set in the root layout.
+- **Crawlability:** Server-Side Rendering (SSR) via Next.js App Router ensures the page content (user list) is present in the initial HTML, making it easily crawlable by search engines.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### WCAG Compliance (Basic)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Semantic HTML:** Uses appropriate HTML elements like `<main>`, `<h1>`, `<ul>`, and `<li>` for structuring content, aiding assistive technologies. The `lang="en"` attribute is set on the `<html>` tag.
+- **Image Accessibility:** Uses the `next/image` component with a dynamically generated `alt` attribute for each user image, providing context for screen readers.
+- **Keyboard Navigation/Focus:** Relies on standard browser behavior for keyboard navigation. Tailwind CSS utilities help ensure visible focus states for interactive elements (if any were added beyond the basic list structure).
